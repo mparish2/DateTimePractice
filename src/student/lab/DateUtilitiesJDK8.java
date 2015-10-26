@@ -133,7 +133,8 @@ public class DateUtilitiesJDK8 {
      LocalDate today2 = LocalDate.now();
      
      System.out.println("Test Date ISO_LOCAL_DATE_Time: " + dateUtilities.toString(today));
-      
+     System.out.println("Test Date ISO_LOCAL_DATE: " + dateUtilities.toString(today2));
+
         System.out.println("Test ToDate: " + dateUtilities.toDate("2010-Jan-04"));
         System.out.println("Test2 ToDate2: " + dateUtilities.toDate2("2012-Feb-12 10:15"));
         System.out.println("Test3 MinusDay: " + dateUtilities.SubDays(today2,6));
