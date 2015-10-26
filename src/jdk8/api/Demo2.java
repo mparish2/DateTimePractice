@@ -39,7 +39,7 @@ public class Demo2 {
         
          // Solution #1
         LocalDateTime endDate = startDate.with(TemporalAdjusters.next(DayOfWeek.SATURDAY));
-        System.out.println(startDate.until(endDate, ChronoUnit.HOURS));
+        System.out.println("Hours" + startDate.until(endDate, ChronoUnit.HOURS));
         
         // Solution #2
         Duration diff = Duration.between(startDate, endDate);
