@@ -87,7 +87,7 @@ public class DateUtilitiesJDK8 {
      /**
       * 
       * @param dateString
-      * @return 
+      * @return a date, converted from a string, using "yyyy-MMM-dd" pattern
       */
      
      public LocalDate toDate(String dateString)throws IllegalArgumentException{
@@ -102,7 +102,7 @@ public class DateUtilitiesJDK8 {
      /**
       * 
       * @param dateTimeString
-      * @return
+      * @return a datetime, converted from a string, using "yyyy-MMM-dd HH:mm" pattern
       * @throws IllegalArgumentException 
       */
      
@@ -120,6 +120,14 @@ public class DateUtilitiesJDK8 {
     
   //Date/Time Artithmetic between two dates (1x)  
      
+     /**
+      * 
+      * @param d = LocalDate
+      * @param daysToSub
+      * @return 
+      */ 
+      
+      
     public LocalDate SubDays(LocalDate d, long daysToSub){
       return d.minusDays(daysToSub);
     }
