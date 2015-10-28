@@ -11,26 +11,23 @@ import java.time.format.DateTimeFormatter;
 
 
 /**
+ * 
+ * This is a new Java 8 API Date Utilities class that has a minimum of two methods for converting Date/Time
+     objects to formatted strings, a minimum of two methods to convert formatted strings to Date/Time objects, and 
+ * one method for performing Date/Time arithmetic
+ * 
+ * Singleton Pattern
+ * In software engineering, the singleton pattern is a design pattern that restricts the instantiation of a class to one object.
+    This is useful when exactly one object is needed to coordinate actions across the system. The concept is sometimes generalized 
+    to systems that operate more efficiently when only one object exists, or that restrict the instantiation to a certain number of
+    objects. https://en.wikipedia.org/wiki/Singleton_pattern
+ * 
  *
  * @author mparish2
  */
 public class DateUtilitiesJDK8 {
-    /*
-     students should complete this lab by one week from today: Create a custom "DateUtilities" class similar to the one demonstrated 
-     by your instructor. However, yours should use the new Java 8 Date/Time API. You must provide a minimum of two methods for converting Date/Time
-     objects to formatted strings; and you must provide a minimum of two methods to convert formatted strings to Date/Time objects. And you must 
-     provide at least one method for performing Date/Time arithmetic, such as the number of months, days, minutes, etc., between two dates.
-     Experimentation is crucial to your success!
-    */
+  
     
-    
-    // Singleton Pattern
-    /*
-        In software engineering, the singleton pattern is a design pattern that restricts the instantiation of a class to one object.
-    This is useful when exactly one object is needed to coordinate actions across the system. The concept is sometimes generalized 
-    to systems that operate more efficiently when only one object exists, or that restrict the instantiation to a certain number of
-    objects. https://en.wikipedia.org/wiki/Singleton_pattern
-    */
      private static DateUtilitiesJDK8 instance;
     
     // Prohibit instantiation -- support Singleton design pattern
@@ -53,7 +50,8 @@ public class DateUtilitiesJDK8 {
    //Convert Date/Time objs to formatted string (2x)  
   // (1)  
     /**
-     * 
+     * Takes a LocalDateTime object in the ISO_LOCAL_DATE_TIME Format and converts it into a 
+     * string
      * @param date
      * @return Current Local Date/Time with the ISO_LOCAL_DATE_TIME predefined format
      * @throws IllegalArgumentException 
@@ -67,7 +65,8 @@ public class DateUtilitiesJDK8 {
      }
      
      /**
-      * 
+      * Takes a LocalDate object in the ISO_LOCAL_DATE Format and converts it into a 
+     * string
       * @param date
       * @return Current LocalDate with the IS0_DATE predefined format
       * @throws IllegalArgumentException 
@@ -85,7 +84,7 @@ public class DateUtilitiesJDK8 {
    //Convert formatted Strings into Date/Time Objs (2x)  
      
      /**
-      * 
+      * Take a String date and converts it into a LocalDate
       * @param dateString
       * @return a date, converted from a string, using "yyyy-MMM-dd" pattern
       */
@@ -100,7 +99,7 @@ public class DateUtilitiesJDK8 {
      }
      
      /**
-      * 
+      * Take a String datetime and converts it into a LocalDate
       * @param dateTimeString
       * @return a datetime, converted from a string, using "yyyy-MMM-dd HH:mm" pattern
       * @throws IllegalArgumentException 
@@ -121,7 +120,7 @@ public class DateUtilitiesJDK8 {
   //Date/Time Artithmetic between two dates (1x)  
      
      /**
-      * 
+      * Takes the current date and subtracts the input number of days from the current date
       * @param d = LocalDate
       * @param daysToSub
       * @return 
@@ -132,6 +131,7 @@ public class DateUtilitiesJDK8 {
       return d.minusDays(daysToSub);
     }
     
+     
      
      
     public static void main(String[] args) {
